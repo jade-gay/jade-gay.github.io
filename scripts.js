@@ -58,41 +58,41 @@ const bookmarks = [
     bookmarks: [
       { label: "YouTube", url: "https://youtube.com" },
       {
-        label: "Discord",
-        url: "https://discord.com/app",
+        label: "Reddit",
+        url: "https://reddit.com/",
       },
-      { label: "Instagram", url: "https://instagram.com" },
-      { label: "Reddit", url: "https://reddit.com/" },
+      { label: "Tiktok", url: "https://tiktok.com" },
+      { label: "Discord", url: "https://discord.com/" },
     ],
   },
   {
-    label: "Productivity",
+    label: "Reddit",
     bookmarks: [
-      { label: "Github", url: "https://github.com/" },
-      { label: "Keybr", url: "https://keybr.com" },
+      { label: "UnixPorn", url: "https://reddit.com/r/unixporn" },
+      { label: "Pop!_OS", url: "https://reddit.com/r/pop_os" },
       {
-        label: "Monkey Type",
-        url: "https://monkeytype.com",
+        label: "MercyMains",
+        url: "https://reddit.com/r/mercymains",
       },
       {
-        label: "Image Enlarger",
-        url: "https://bigjpg.com/en",
+        label: "HypixelSkyblock",
+        url: "https://reddit.com/r/hypixelskyblock",
       },
     ],
   },
   {
-    label: "CTF",
+    label: "Misc",
     bookmarks: [
-      { label: "CTF Time", url: "https://ctftime.org" },
+      { label: "Proton Mail", url: "https://mail.proton.me/" },
       {
-        label: "Try Hack Me",
-        url: "https://tryhackme.com/",
+        label: "Gmail",
+        url: "https://gmail.com/",
       },
       {
-        label: "Hack Tricks",
-        url: "https://book.hacktricks.xyz/welcome/readme",
+        label: "Movies",
+        url: "soap2day.to",
       },
-      { label: "Cyber Chef", url: "https://gchq.github.io/CyberChef/" },
+      { label: "Anime", url: "https://9animetv.to/" },
     ],
   },
 ];
