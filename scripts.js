@@ -90,7 +90,7 @@ const bookmarks = [
       },
       {
         label: "Movies",
-        url: "soap2day.to",
+        url: "https://soap2day.to/",
       },
       { label: "Anime", url: "https://9animetv.to/" },
     ],
