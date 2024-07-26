@@ -74,9 +74,11 @@ const updateSearchIndicator = (value) => {
     if (lookup[prefix] || engineUrls[prefix] || prefix === 'r') {
       searchBadge.style.display = 'inline-block';
       if (prefix === 'r') {
-        searchBadge.textContent = `Searching subreddit`;
+        searchBadge.textContent = `Searching reddit`;
+        searchBadge.style.backgroundColor = '#b4befe';
       } else {
         searchBadge.textContent = `Searching ${prefix}`;
+        searchBadge.style.backgroundColor = '#b4befe';
       }
     } else {
       searchBadge.style.display = 'none';
@@ -85,6 +87,7 @@ const updateSearchIndicator = (value) => {
     searchBadge.style.display = 'none';
   }
 };
+
 
 const search = () => {
   const value = searchInput.value;
