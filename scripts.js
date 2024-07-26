@@ -49,11 +49,16 @@ const getTargetUrl = (value) => {
   if (splitValue.length > 1) {
     const [prefix, ...query] = splitValue;
     const queryString = query.join(" ");
+    // If the prefix is found in the lookup or engineUrls, construct the target URL
     if (lookup[prefix]) {
       return lookup[prefix] + "results?search_query=" + encodeURIComponent(queryString);
     }
     if (engineUrls[prefix]) {
       return engineUrls[prefix] + encodeURIComponent(queryString);
+    }
+    // Specific handling for reddit subreddits
+    if (prefix === 'r') {
+      return `https://reddit.com/r/${queryString}`;
     }
   }
 
