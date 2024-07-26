@@ -5,6 +5,17 @@
     <link rel="icon" href="./favicon.ico" />
     <link href="./styles.css" rel="stylesheet" />
     <title>New tab</title>
+    <style>
+      .badge {
+        display: inline-block;
+        padding: 0.2em 0.6em;
+        margin-left: 0.5em;
+        background-color: #007bff;
+        color: white;
+        border-radius: 0.25em;
+        font-size: 0.9em;
+      }
+    </style>
   </head>
   <body>
     <div class="surface">
@@ -31,12 +42,13 @@
             <span class="visually-hidden">Search</span>
           </button>
           <input type="text" placeholder="Search" autofocus />
+          <span id="searchBadge" class="badge" style="display: none;"></span>
         </div>
         <div id="bookmarks">
           <!-- Bookmarks will get inserted here! -->
         </div>
       </main>
     </div>
+    <script type="text/javascript" src="./scripts.js"></script>
   </body>
-  <script type="text/javascript" src="./scripts.js"></script>
 </html>
