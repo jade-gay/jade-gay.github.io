@@ -14,7 +14,7 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+  font: var(--color-primary-bg);
   color: currentColor;
 }
 
