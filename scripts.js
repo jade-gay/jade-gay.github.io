@@ -15,6 +15,7 @@ const lookup = {
   yt: "https://youtube.com/",
   git: "https://github.com/",
   chatgpt: "https://chatgpt.com/",
+  hyprland: "https://hyprland.org/",
 };
 
 const engine = "google";
@@ -105,8 +106,8 @@ const bookmarks = [
       },
       { label: "Arch Linux", url: "https://archlinux.org/" },
       {
-        label: "Movies",
-        url: "https://hydrahd.com",
+        label: "Hyprland Wiki",
+        url: "https://hyprland.org/",
       },
     ],
   },
