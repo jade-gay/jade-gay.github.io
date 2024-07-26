@@ -44,8 +44,14 @@ const getTargetUrl = (value) => {
 
   const splitValue = normalizedValue.split("/");
   if (splitValue.length > 1) {
-    const [prefix, ...query] = splitValue;
-    const queryString = query.join(" ");
+    const [prefix, ...queryParts] = splitValue;
+    const queryString = queryParts.join(" ");
+    
+    if (prefix === 'r' && queryString.includes(':')) {
+      const [subreddit, searchQuery] = queryString.split(':');
+      return `https://reddit.com/r/${subreddit.trim()}/search/?q=${encodeURIComponent(searchQuery.trim())}`;
+    }
+
     if (lookup[prefix]) {
       return lookup[prefix] + "results?search_query=" + encodeURIComponent(queryString);
     }
@@ -71,15 +77,20 @@ const updateSearchIndicator = (value) => {
   const splitValue = normalizedValue.split("/");
   if (splitValue.length > 1) {
     const [prefix] = splitValue;
-    if (lookup[prefix] || engineUrls[prefix] || prefix === 'r') {
-      searchBadge.style.display = 'inline-block';
-      if (prefix === 'r') {
-        searchBadge.textContent = `Searching reddit`;
+    if (prefix === 'r') {
+      if (normalizedValue.includes(':')) {
+        searchBadge.style.display = 'inline-block';
+        searchBadge.textContent = `Searching subreddit`;
         searchBadge.style.backgroundColor = '#b4befe';
       } else {
-        searchBadge.textContent = `Searching ${prefix}`;
+        searchBadge.style.display = 'inline-block';
+        searchBadge.textContent = `Searching Reddit`;
         searchBadge.style.backgroundColor = '#b4befe';
       }
+    } else if (lookup[prefix] || engineUrls[prefix]) {
+      searchBadge.style.display = 'inline-block';
+      searchBadge.textContent = `Searching ${prefix}`;
+      searchBadge.style.backgroundColor = '#b4befe';
     } else {
       searchBadge.style.display = 'none';
     }
@@ -87,7 +98,6 @@ const updateSearchIndicator = (value) => {
     searchBadge.style.display = 'none';
   }
 };
-
 
 const search = () => {
   const value = searchInput.value;
