@@ -19,7 +19,7 @@ select {
 }
 
 a {
-  color: inherit;
+  color: var(--color-primary-bg);
   text-decoration: none;
   outline: none;
 }
