@@ -13,6 +13,7 @@ const lookup = {
   deepl: "https://deepl.com/",
   reddit: "https://reddit.com/",
   maps: "https://maps.google.com/",
+  yt: "https://youtube.com/",
 };
 const engine = "google";
 const engineUrls = {
@@ -61,22 +62,22 @@ const bookmarks = [
         label: "Reddit",
         url: "https://reddit.com/",
       },
-      { label: "Tiktok", url: "https://tiktok.com" },
-      { label: "Discord", url: "https://discord.com/" },
+      { label: "Kick", url: "https://kick.com" },
+      { label: "Twitch", url: "https://twitch.tv" },
     ],
   },
   {
     label: "Reddit",
     bookmarks: [
       { label: "UnixPorn", url: "https://reddit.com/r/unixporn" },
-      { label: "Pop!_OS", url: "https://reddit.com/r/pop_os" },
+      { label: "ArchLinux", url: "https://www.reddit.com/r/archlinux/" },
       {
-        label: "MercyMains",
-        url: "https://reddit.com/r/mercymains",
+        label: "Trans",
+        url: "https://reddit.com/r/trans",
       },
       {
-        label: "HypixelSkyblock",
-        url: "https://reddit.com/r/hypixelskyblock",
+        label: "Cats",
+        url: "https://reddit.com/r/cats",
       },
     ],
   },
@@ -85,14 +86,14 @@ const bookmarks = [
     bookmarks: [
       { label: "Proton Mail", url: "https://mail.proton.me/" },
       {
-        label: "Gmail",
-        url: "https://gmail.com/",
+        label: "Github",
+        url: "https://github.com/jade-gay",
       },
+      { label: "Arch Linux", url: "https://archlinux.org/" },
       {
         label: "Movies",
-        url: "https://soap2day.to/",
+        url: "https://hydrahd.com",
       },
-      { label: "Anime", url: "https://9anime.to/" },
     ],
   },
 ];
