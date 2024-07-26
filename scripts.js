@@ -15,6 +15,7 @@ const lookup = {
   maps: "https://maps.google.com/",
   yt: "https://youtube.com/",
 };
+
 const engine = "google";
 const engineUrls = {
   deepl: "https://www.deepl.com/translator#-/-/",
@@ -35,8 +36,20 @@ const isWebUrl = (value) => {
 };
 
 const getTargetUrl = (value) => {
-  if (isWebUrl(value)) return value;
-  if (lookup[value]) return lookup[value];
+  // Convert input value to lowercase
+  const normalizedValue = value.toLowerCase();
+
+  // Check if normalized value is a web URL
+  if (isWebUrl(normalizedValue)) return normalizedValue;
+
+  // Check lookup object with lowercase keys
+  for (const key in lookup) {
+    if (key.toLowerCase() === normalizedValue) {
+      return lookup[key];
+    }
+  }
+
+  // Default to search engine URL
   return engineUrls[engine] + value;
 };
 
