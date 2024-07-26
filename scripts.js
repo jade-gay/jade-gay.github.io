@@ -10,10 +10,11 @@ const searchButton = document.querySelector("#searchbar > button");
 
 const lookup = {
   "/": "/",
-  deepl: "https://deepl.com/",
   reddit: "https://reddit.com/",
   maps: "https://maps.google.com/",
   yt: "https://youtube.com/",
+  git: "https://github.com/",
+  chatgpt: "https://chatgpt.com/",
 };
 
 const engine = "google";
