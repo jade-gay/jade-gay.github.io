@@ -7,6 +7,7 @@
 
 const searchInput = document.querySelector("#searchbar > input");
 const searchButton = document.querySelector("#searchbar > button");
+const searchBadge = document.querySelector("#searchBadge");
 
 const lookup = {
   "/": "/",
@@ -38,39 +39,51 @@ const isWebUrl = (value) => {
 };
 
 const getTargetUrl = (value) => {
-  // Convert input value to lowercase
   const normalizedValue = value.toLowerCase();
-
-  // Check if normalized value is a web URL
   if (isWebUrl(normalizedValue)) return normalizedValue;
 
-  // Check for specific shortcuts with search queries
   const splitValue = normalizedValue.split("/");
   if (splitValue.length > 1) {
     const [prefix, ...query] = splitValue;
     const queryString = query.join(" ");
-    // If the prefix is found in the lookup or engineUrls, construct the target URL
     if (lookup[prefix]) {
       return lookup[prefix] + "results?search_query=" + encodeURIComponent(queryString);
     }
     if (engineUrls[prefix]) {
       return engineUrls[prefix] + encodeURIComponent(queryString);
     }
-    // Specific handling for reddit subreddits
     if (prefix === 'r') {
       return `https://reddit.com/r/${queryString}`;
     }
   }
 
-  // Check lookup object with lowercase keys
   for (const key in lookup) {
     if (key.toLowerCase() === normalizedValue) {
       return lookup[key];
     }
   }
 
-  // Default to search engine URL
   return engineUrls[engine] + encodeURIComponent(value);
+};
+
+const updateSearchIndicator = (value) => {
+  const normalizedValue = value.toLowerCase();
+  const splitValue = normalizedValue.split("/");
+  if (splitValue.length > 1) {
+    const [prefix] = splitValue;
+    if (lookup[prefix] || engineUrls[prefix] || prefix === 'r') {
+      searchBadge.style.display = 'inline-block';
+      if (prefix === 'r') {
+        searchBadge.textContent = `Searching subreddit`;
+      } else {
+        searchBadge.textContent = `Searching ${prefix}`;
+      }
+    } else {
+      searchBadge.style.display = 'none';
+    }
+  } else {
+    searchBadge.style.display = 'none';
+  }
 };
 
 const search = () => {
@@ -79,7 +92,12 @@ const search = () => {
   window.open(targetUrl, "_self");
 };
 
-searchInput.onkeyup = (event) => event.key === "Enter" && search();
+searchInput.onkeyup = (event) => {
+  updateSearchIndicator(searchInput.value);
+  if (event.key === "Enter") {
+    search();
+  }
+};
 searchButton.onclick = search;
 
 /**
@@ -90,10 +108,7 @@ const bookmarks = [
     label: "Social Media",
     bookmarks: [
       { label: "YouTube", url: "https://youtube.com" },
-      {
-        label: "Reddit",
-        url: "https://reddit.com/",
-      },
+      { label: "Reddit", url: "https://reddit.com/" },
       { label: "Kick", url: "https://kick.com" },
       { label: "Twitch", url: "https://twitch.tv" },
     ],
@@ -103,29 +118,17 @@ const bookmarks = [
     bookmarks: [
       { label: "UnixPorn", url: "https://reddit.com/r/unixporn" },
       { label: "ArchLinux", url: "https://www.reddit.com/r/archlinux/" },
-      {
-        label: "Trans",
-        url: "https://reddit.com/r/trans",
-      },
-      {
-        label: "Cats",
-        url: "https://reddit.com/r/cats",
-      },
+      { label: "Trans", url: "https://reddit.com/r/trans" },
+      { label: "Cats", url: "https://reddit.com/r/cats" },
     ],
   },
   {
     label: "Misc",
     bookmarks: [
       { label: "Proton Mail", url: "https://mail.proton.me/" },
-      {
-        label: "Github",
-        url: "https://github.com/jade-gay",
-      },
+      { label: "Github", url: "https://github.com/jade-gay" },
       { label: "Arch Linux", url: "https://archlinux.org/" },
-      {
-        label: "Hyprland Wiki",
-        url: "https://hyprland.org/",
-      },
+      { label: "Hyprland Wiki", url: "https://hyprland.org/" },
     ],
   },
 ];
@@ -169,9 +172,7 @@ const createGroup = ({ label, bookmarks }) => {
 const injectBookmarks = () => {
   const bookmarksContainer = document.getElementById("bookmarks");
   bookmarksContainer.append();
-  bookmarks
-    .map(createGroup)
-    .forEach((group) => bookmarksContainer.append(group));
+  bookmarks.map(createGroup).forEach((group) => bookmarksContainer.append(group));
 };
 
 injectBookmarks();
