@@ -25,7 +25,7 @@ const engineUrls = {
   ecosia: "https://www.ecosia.org/search?q=",
   google: "https://www.google.com/search?q=",
   startpage: "https://www.startpage.com/search?q=",
-  youtube: "https://www.youtube.com/results?q=",
+  youtube: "https://www.youtube.com/results?search_query=",
 };
 
 const isWebUrl = (value) => {
@@ -44,6 +44,19 @@ const getTargetUrl = (value) => {
   // Check if normalized value is a web URL
   if (isWebUrl(normalizedValue)) return normalizedValue;
 
+  // Check for specific shortcuts with search queries
+  const splitValue = normalizedValue.split("/");
+  if (splitValue.length > 1) {
+    const [prefix, ...query] = splitValue;
+    const queryString = query.join(" ");
+    if (lookup[prefix]) {
+      return lookup[prefix] + "results?search_query=" + encodeURIComponent(queryString);
+    }
+    if (engineUrls[prefix]) {
+      return engineUrls[prefix] + encodeURIComponent(queryString);
+    }
+  }
+
   // Check lookup object with lowercase keys
   for (const key in lookup) {
     if (key.toLowerCase() === normalizedValue) {
@@ -52,7 +65,7 @@ const getTargetUrl = (value) => {
   }
 
   // Default to search engine URL
-  return engineUrls[engine] + value;
+  return engineUrls[engine] + encodeURIComponent(value);
 };
 
 const search = () => {
@@ -67,7 +80,6 @@ searchButton.onclick = search;
 /**
  * inject bookmarks into html
  */
-/** */
 const bookmarks = [
   {
     label: "Social Media",
