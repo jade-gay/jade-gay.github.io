@@ -38,9 +38,12 @@ const isWebUrl = (value) => {
   }
 };
 
+const isDomain = (value) => /^[a-z0-9.-]+\.[a-z]{2,}$/.test(value);
+
 const getTargetUrl = (value) => {
   const normalizedValue = value.toLowerCase();
   if (isWebUrl(normalizedValue)) return normalizedValue;
+  if (isDomain(normalizedValue)) return `https://${normalizedValue}`;
 
   const splitValue = normalizedValue.split("/");
   if (splitValue.length > 1) {
@@ -65,19 +68,6 @@ const getTargetUrl = (value) => {
 
   if (normalizedValue in lookup) {
     return lookup[normalizedValue];
-  }
-
-  if (/^[a-z0-9.-]+\.[a-z]{2,}$/.test(normalizedValue)) {
-    return `https://${normalizedValue}`;
-  }
-
-  return engineUrls[engine] + encodeURIComponent(value);
-};
-
-  for (const key in lookup) {
-    if (key.toLowerCase() === normalizedValue) {
-      return lookup[key];
-    }
   }
 
   return engineUrls[engine] + encodeURIComponent(value);
@@ -195,7 +185,7 @@ const createGroup = ({ label, bookmarks }) => {
 
 const injectBookmarks = () => {
   const bookmarksContainer = document.getElementById("bookmarks");
-  bookmarksContainer.append();
+  bookmarksContainer.innerHTML = ''; // Ensure container is empty before injecting
   bookmarks.map(createGroup).forEach((group) => bookmarksContainer.append(group));
 };
 
