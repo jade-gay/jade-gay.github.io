@@ -63,6 +63,17 @@ const getTargetUrl = (value) => {
     }
   }
 
+  if (normalizedValue in lookup) {
+    return lookup[normalizedValue];
+  }
+
+  if (/^[a-z0-9.-]+\.[a-z]{2,}$/.test(normalizedValue)) {
+    return `https://${normalizedValue}`;
+  }
+
+  return engineUrls[engine] + encodeURIComponent(value);
+};
+
   for (const key in lookup) {
     if (key.toLowerCase() === normalizedValue) {
       return lookup[key];
