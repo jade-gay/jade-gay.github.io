@@ -141,7 +141,7 @@ const bookmarks = [
       { label: "Proton Mail", url: "https://mail.proton.me/" },
       { label: "Github", url: "https://github.com/jade-gay" },
       { label: "Arch Linux", url: "https://archlinux.org/" },
-      { label: "Hyprland Wiki", url: "https://hyprland.org/" },
+      { label: "Hyprland Wiki", url: "https://wiki.hyprland.org/" },
     ],
   },
 ];
