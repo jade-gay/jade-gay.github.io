@@ -18,6 +18,7 @@ const lookup = {
   chatgpt: "https://chatgpt.com/",
   seedbox: "https://may.thor.usbx.me/qbittorrent/",
   arch: "https://wiki.archlinux.org/title/Main_page",
+  roblox: "https://roblox.com",
 };
 
 const engine = "google";
