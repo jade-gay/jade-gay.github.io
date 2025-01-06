@@ -140,9 +140,9 @@ const bookmarks = [
     label: "Misc",
     bookmarks: [
       { label: "Proton Mail", url: "https://mail.proton.me/" },
-      { label: "Github", url: "https://github.com/jade-gay" },
-      { label: "Arch Linux", url: "https://archlinux.org/" },
-      { label: "Hyprland Wiki", url: "https://wiki.hyprland.org/" },
+      { label: "Torrent Leech", url: "https://www.torrentleech.org" },
+      { label: "Arch", url: "https://archlinux.org/" },
+      { label: "Seedbox", url: "https://may.thor.usbx.me/qbittorrent/" },
     ],
   },
 ];
