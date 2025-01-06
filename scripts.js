@@ -82,16 +82,16 @@ const updateSearchIndicator = (value) => {
       if (normalizedValue.includes(':')) {
         searchBadge.style.display = 'inline-block';
         searchBadge.textContent = `Searching subreddit`;
-        searchBadge.style.backgroundColor = '#b4befe';
+        searchBadge.style.backgroundColor = '#cba6f7';
       } else {
         searchBadge.style.display = 'inline-block';
         searchBadge.textContent = `Searching Reddit`;
-        searchBadge.style.backgroundColor = '#b4befe';
+        searchBadge.style.backgroundColor = '#cba6f7';
       }
     } else if (lookup[prefix] || engineUrls[prefix]) {
       searchBadge.style.display = 'inline-block';
       searchBadge.textContent = `Searching ${prefix}`;
-      searchBadge.style.backgroundColor = '#b4befe';
+      searchBadge.style.backgroundColor = '#cba6f7';
     } else {
       searchBadge.style.display = 'none';
     }
