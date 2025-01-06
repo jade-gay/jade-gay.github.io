@@ -205,7 +205,7 @@ body {
 
 .bookmark-group > ul > li > a:hover,
 .bookmark-group > ul > li > a:focus-visible {
-  color: #cba6f7;
+  color: #f5c2e7;
 }
 
 .bookmark-group > ul > li > a:hover::before,
