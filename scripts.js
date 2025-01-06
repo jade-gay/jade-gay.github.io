@@ -16,7 +16,7 @@ const lookup = {
   yt: "https://youtube.com/",
   git: "https://github.com/",
   chatgpt: "https://chatgpt.com/",
-  hyprland: "https://hyprland.org/",
+  seedbox: "https://may.thor.usbx.me/qbittorrent/",
 };
 
 const engine = "google";
