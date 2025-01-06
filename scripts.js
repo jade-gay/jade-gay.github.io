@@ -142,8 +142,8 @@ const bookmarks = [
     bookmarks: [
       { label: "Proton Mail", url: "https://mail.proton.me/" },
       { label: "Torrent Leech", url: "https://www.torrentleech.org" },
-      { label: "Arch", url: "https://archlinux.org/" },
       { label: "Seedbox", url: "https://may.thor.usbx.me/qbittorrent/" },
+      { label: "Arch", url: "https://archlinux.org/" },
     ],
   },
 ];
@@ -206,5 +206,5 @@ function animateTitle(string) {
   recursiveAnimateTitle(string);
 }
 
-animateTitle('meow! <3');
+animateTitle('woof! <3');
 injectBookmarks();
