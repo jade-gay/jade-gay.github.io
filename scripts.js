@@ -17,6 +17,7 @@ const lookup = {
   git: "https://github.com/",
   chatgpt: "https://chatgpt.com/",
   seedbox: "https://may.thor.usbx.me/qbittorrent/",
+  arch: "https://wiki.archlinux.org/title/Main_page",
 };
 
 const engine = "google";
