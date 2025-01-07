@@ -104,7 +104,9 @@ const updateSearchIndicator = (value) => {
 };
 
 const search = () => {
-  const value = searchInput.value;
+  const value = searchInput.value.trim();
+  if (value === "") return;
+  
   const targetUrl = getTargetUrl(value);
   window.open(targetUrl, "_self");
 };
