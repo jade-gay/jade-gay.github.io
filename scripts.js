@@ -20,6 +20,7 @@ const lookup = {
   arch: "https://wiki.archlinux.org/title/Main_page",
   roblox: "https://roblox.com",
   puppyfin: "https://www.maymeows.space/web/#/home.html",
+  protondb: "https://www.protondb.com/",
 };
 
 const engine = "google";
