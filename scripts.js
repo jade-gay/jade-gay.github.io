@@ -19,7 +19,7 @@ const lookup = {
   seedbox: "https://may.thor.usbx.me/qbittorrent/",
   arch: "https://wiki.archlinux.org/title/Main_page",
   roblox: "https://roblox.com",
-  puppyfin: "http://www.maymeows.space/web/#/home.html",
+  puppyfin: "http://maymeows.space/web/#/home.html",
   protondb: "https://www.protondb.com/",
 };
 
@@ -148,7 +148,7 @@ const bookmarks = [
       { label: "Proton Mail", url: "https://mail.proton.me/" },
       { label: "Torrent Leech", url: "https://www.torrentleech.org" },
       { label: "Seedbox", url: "https://may.thor.usbx.me/qbittorrent/" },
-      { label: "Puppyfin", url: "http://www.maymeows.space/web/#/home.html" },
+      { label: "Puppyfin", url: "http://maymeows.space/web/#/home.html" },
     ],
   },
 ];
