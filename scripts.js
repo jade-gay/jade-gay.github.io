@@ -21,6 +21,7 @@ const lookup = {
   roblox: "https://roblox.com",
   puppyfin: "https://puppyf.in",
   protondb: "https://www.protondb.com/",
+  fitgirl: "fitgirl-repacks.site",
 };
 
 const engine = "google";
