@@ -21,6 +21,7 @@ const lookup = {
   roblox: "https://roblox.com",
   puppyfin: "https://puppyf.in",
   protondb: "https://www.protondb.com/",
+  "c": "https://exercism.org",
 };
 
 const engine = "google";
@@ -146,7 +147,7 @@ const bookmarks = [
     label: "Misc",
     bookmarks: [
       { label: "Proton Mail", url: "https://mail.proton.me/" },
-      { label: "Torrent Leech", url: "https://www.torrentleech.org" },
+      { label: "Exercism", url: "https://exercism.org" },
       { label: "Seedbox", url: "https://may.thor.usbx.me/qbittorrent/" },
       { label: "Puppyfin", url: "https://puppyf.in" },
     ],
