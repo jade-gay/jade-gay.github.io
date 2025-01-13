@@ -22,6 +22,7 @@ const lookup = {
   puppyfin: "https://puppyf.in",
   protondb: "https://www.protondb.com/",
   fitgirl: "https://fitgirl-repacks.site",
+  kick: "https://kick.com",
 };
 
 const engine = "google";
