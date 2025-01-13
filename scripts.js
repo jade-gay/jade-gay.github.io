@@ -61,6 +61,10 @@ const getTargetUrl = (value) => {
       return `https://reddit.com/r/${subreddit.trim()}/search/?q=${encodeURIComponent(searchQuery.trim())}`;
     }
 
+    if (prefix === 'arch') {
+      return `https://wiki.archlinux.org/index.php?search=${encodeURIComponent(queryString)}&title=Special%3ASearch&wprov=acrw1_-1`;
+    }
+
     if (lookup[prefix]) {
       return lookup[prefix] + "results?search_query=" + encodeURIComponent(queryString);
     }
