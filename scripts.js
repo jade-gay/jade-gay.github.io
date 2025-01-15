@@ -23,6 +23,7 @@ const lookup = {
   protondb: "https://www.protondb.com/",
   fitgirl: "https://fitgirl-repacks.site",
   kick: "https://kick.com",
+  puppyseer: "http://50.lw.itsby.design:5570/",
 };
 
 const engine = "google";
