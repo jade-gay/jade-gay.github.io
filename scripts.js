@@ -16,7 +16,7 @@ const lookup = {
   yt: "https://youtube.com/",
   git: "https://github.com/",
   chatgpt: "https://chatgpt.com/",
-  seedbox: "https://may.thor.usbx.me/qbittorrent/",
+  seedbox: "https://50.lw.itsby.design/qbittorrent/",
   arch: "https://wiki.archlinux.org/title/Main_page",
   roblox: "https://roblox.com",
   puppyfin: "https://puppyf.in",
@@ -159,7 +159,7 @@ const bookmarks = [
     bookmarks: [
       { label: "Proton Mail", url: "https://mail.proton.me/" },
       { label: "Torrent Leech", url: "https://www.torrentleech.org/" },
-      { label: "Seedbox", url: "https://may.thor.usbx.me/qbittorrent/" },
+      { label: "Seedbox", url: "https://50.lw.itsby.design/qbittorrent/" },
       { label: "Puppyfin", url: "https://puppyf.in" },
     ],
   },
