@@ -24,6 +24,7 @@ const lookup = {
   fitgirl: "https://fitgirl-repacks.site",
   kick: "https://kick.com",
   puppyseer: "http://50.lw.itsby.design:5570/",
+  dodi: "https://dodi-repacks.site/",
 };
 
 const engine = "google";
