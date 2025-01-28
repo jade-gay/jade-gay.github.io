@@ -25,6 +25,7 @@ const lookup = {
   kick: "https://kick.com",
   puppyseer: "http://50.lw.itsby.design:5570/",
   dodi: "https://dodi-repacks.site/",
+  hyprland: "https://wiki.hyprland.org/",
 };
 
 const engine = "google";
