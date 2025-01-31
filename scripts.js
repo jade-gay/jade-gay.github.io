@@ -139,30 +139,30 @@ searchButton.onclick = search;
  */
 const bookmarks = [
   {
-    label: "Social Media",
+    label: "social media",
     bookmarks: [
-      { label: "YouTube", url: "https://youtube.com" },
-      { label: "Reddit", url: "https://reddit.com/" },
-      { label: "Kick", url: "https://kick.com" },
-      { label: "Twitch", url: "https://twitch.tv" },
+      { label: "youtube", url: "https://youtube.com" },
+      { label: "reddit", url: "https://reddit.com/" },
+      { label: "kick", url: "https://kick.com" },
+      { label: "twitch", url: "https://twitch.tv" },
     ],
   },
   {
-    label: "Reddit",
+    label: "reddit",
     bookmarks: [
-      { label: "UnixPorn", url: "https://reddit.com/r/unixporn" },
-      { label: "ArchLinux", url: "https://www.reddit.com/r/archlinux/" },
-      { label: "Trans", url: "https://reddit.com/r/trans" },
-      { label: "Cats", url: "https://reddit.com/r/cats" },
+      { label: "unixporn", url: "https://reddit.com/r/unixporn" },
+      { label: "archlinux", url: "https://www.reddit.com/r/archlinux/" },
+      { label: "trans", url: "https://reddit.com/r/trans" },
+      { label: "cats", url: "https://reddit.com/r/cats" },
     ],
   },
   {
-    label: "Misc",
+    label: "misc",
     bookmarks: [
-      { label: "Proton Mail", url: "https://mail.proton.me/" },
-      { label: "Torrent Leech", url: "https://www.torrentleech.org/" },
-      { label: "Seedbox", url: "https://50.lw.itsby.design/qbittorrent/" },
-      { label: "Puppyfin", url: "https://puppyf.in" },
+      { label: "proton mail", url: "https://mail.proton.me/" },
+      { label: "torrent leech", url: "https://www.torrentleech.org/" },
+      { label: "seedbox", url: "https://50.lw.itsby.design/qbittorrent/" },
+      { label: "puppyfin", url: "https://puppyf.in" },
     ],
   },
 ];
