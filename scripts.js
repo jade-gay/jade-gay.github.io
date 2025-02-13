@@ -95,20 +95,20 @@ const updateSearchIndicator = (value) => {
       if (normalizedValue.includes(':')) {
         searchBadge.style.display = 'inline-block';
         searchBadge.textContent = `Searching subreddit`;
-        searchBadge.style.backgroundColor = '#f5c2e7';
+        searchBadge.style.backgroundColor = '#ea9a97';
       } else {
         searchBadge.style.display = 'inline-block';
         searchBadge.textContent = `Searching Reddit`;
-        searchBadge.style.backgroundColor = '#f5c2e7';
+        searchBadge.style.backgroundColor = '#ea9a97';
       }
     } else if (prefix === 'arch') {
       searchBadge.style.display = 'inline-block';
       searchBadge.textContent = `Searching Arch`;
-      searchBadge.style.backgroundColor = '#f5c2e7'
+      searchBadge.style.backgroundColor = '#ea9a97'
     } else if (lookup[prefix] || engineUrls[prefix]) {
       searchBadge.style.display = 'inline-block';
       searchBadge.textContent = `Searching ${prefix}`;
-      searchBadge.style.backgroundColor = '#f5c2e7';
+      searchBadge.style.backgroundColor = '#ea9a97';
     } else {
       searchBadge.style.display = 'none';
     }
